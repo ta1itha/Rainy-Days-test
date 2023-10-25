@@ -1,18 +1,95 @@
-header {
-    background-color: #003b4a
+.col-sm-12{
+    grid-column: auto / span 12;
 }
 
+@media(width >= 768px){
+    .col-md-6{
+        grid-column: auto / span 6;
+    }
+}
+header {
+    background-color: #003b4a;
+}
+
+.parent {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.img-man {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    width: 500px;
+    height: 400px;     
+}
+
+.img-logo {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    width: 412px;
+    height: 219px;
+}
+
+/* 
+    Margin:
+    Border: 
+    Padding:
+*/
 
 .menu1 {
     font-family: montserrat;
     font-size: 16px;
-    color: #fff
+    color: #fff;
+    width: 429px;
+    float: center;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-top: 48px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
+a:link { text-decoration: none; }
+a:visited {text-decoration: none}
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+
+/* tenk på position absolute ang. meny 2*/
 .menu2 {
     font-family: montserrat;
     font-size: 16px;
-    color: #d99982
+    color: #d99982;
+    width: 710px;
+    float: center;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.button-nav {
+    background-color: #d99982;
+    color: #fff;
+    font-size: 16px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.btn:focus {
+    outline: none;
 }
 
 body {
@@ -20,18 +97,20 @@ body {
     margin: 0;
 }
 
-h1 {
+h3 {
     font-size: 32px;
     font-family: montserrat;
     color: #0b0c0d;
 }
 
-.content {
+.content-contact {
     font-size: 16px;
-    font-family: open sans;
+    font-family: "open sans";
     color: #0b0c0d
 }
 
 footer {
     background-color: #003b4a;
 }
+
+/* VALIDATE jigsaw.w3.org */
