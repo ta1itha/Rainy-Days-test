@@ -1,16 +1,96 @@
+.header {
+    background-color: #003b4a;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    grid-area: myheader;
+}
+
+.main {
+    grid-area: mymain;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    display: block;
+}
+
+
+.header-logo {
+    font-size: 24px;
+    margin: 0;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    grid-area: mynav;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Mediaforespørsler for ulike skjermstørrelser */
+/* Mobil */
+@media (max-width: 600px) {
+    .nav-item {
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    .button-nav {
+        display: inline;
+    }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .header-logo {
+        font-size: 22px;
+    }
+
+    .nav-item {
+        font-size: 20px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .header {
+        flex-direction: row;
+    }
+
+    .header-logo {
+        font-size: 24px;
+    }
+
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-item {
+        font-size: 18px;
+        margin-right: 20px;
+    }
+}
+
 .col-sm-12{
     grid-column: auto / span 12;
 }
 
-@media(width >= 768px){
+@media(min-width >= 768px){
     .col-md-6{
         grid-column: auto / span 6;
     }
 }
-header {
-    background-color: #003b4a;
-}
 
+/* parent to img-man and img-logo */
 .parent {
     position: relative;
     top: 0;
@@ -22,8 +102,9 @@ header {
     top: 0;
     left: 0;
     padding: 20px;
-    width: 500px;
-    height: 400px;     
+    width: 100%;
+    max-width: 1000px;
+    height: auto;     
 }
 
 .img-logo {
@@ -31,86 +112,85 @@ header {
     top: 0;
     left: 0;
     padding: 20px;
-    width: 412px;
-    height: 219px;
+    max-width: 400px;
+    height: auto;
 }
-
-/* 
-    Margin:
-    Border: 
-    Padding:
-*/
 
 .menu1 {
     font-family: montserrat;
     font-size: 16px;
     color: #fff;
     width: 429px;
-    float: center;
+    margin: 0 auto;
     height: 70px;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
-    align-items: center;
     list-style: none;
     margin-top: 48px;
     font-size: 16px;
     font-weight: bold;
-    text-decoration: none;
 }
 
+
+/* Har jeg bruk for disse? */
 a:link { text-decoration: none; }
-a:visited {text-decoration: none}
+a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
 a:active { text-decoration: none; }
 
-
-/* tenk på position absolute ang. meny 2*/
-.menu2 {
-    font-family: montserrat;
-    font-size: 16px;
-    color: #d99982;
-    width: 710px;
-    float: center;
-    height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-}
 
 .button-nav {
     background-color: #d99982;
     color: #fff;
     font-size: 16px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
-
-.btn:focus {
-    outline: none;
+    border-radius: 15px;
 }
 
 body {
     background-color: #d9d9d9;
     margin: 0;
+    display: grid;
+    grid-template-areas: 
+        'myheader mynav'
+        'mynav mymain'
+        'mymain myfooter';
 }
 
-h3 {
+h1 {
     font-size: 32px;
     font-family: montserrat;
     color: #0b0c0d;
 }
 
+.service-woman {
+    max-width: 400px;
+    float: left;
+    margin-left: 160px;
+}
+
 .content-contact {
     font-size: 16px;
     font-family: "open sans";
-    color: #0b0c0d
+    color: #0b0c0d;
+    float: right;
 }
 
-footer {
+#container-grid {
+    position: relative;
+    min-height: 100vh
+}
+
+#content-wrap {
+    padding-bottom: 10rem;
+}
+
+#footer-pos{
     background-color: #003b4a;
+    color: #fff;
+    width: 100%;
+    height: 10rem;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
 }
-
 /* VALIDATE jigsaw.w3.org */
