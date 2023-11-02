@@ -1,196 +1,187 @@
+/* tilbakestill stil for lenker */
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none; /* Tar bort standard understrekning ocg stil for linkar */
+}
+
+/* Skaper en grunnleggende struktur for websiden med grid-layout */
+body {
+    background-color: #d9d9d9;
+    margin: 0; /* Tar bort standardmarginaler for siden */
+    display: grid; /* Grid-layout for å strukturere siden */
+    grid-template-areas:
+        'header nav'
+        'nav content'
+        'content footer';
+    grid-template-rows: auto 1fr auto; /* Deler opp sidan i header, innehåll och footer */
+}
+
+/* Stil for header-seksjonen */
 .header {
-    background-color: #003b4a;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    grid-area: myheader;
+    background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(0,59,74,1));
+    /* background-image: url("/img/Logo-RD.png") right no-repeat, url(/img/philip-graves-7kyvHc3e-HA-unsplash.jpg) left no-repeat; */
+    background-blend-mode: multiply;
+    padding: 10px; /* Legger til litt margin for avstand */
+    display: flex; /* Flex-layout for header */
+    flex-direction: column; /* Stabler element vertikalt i header */
+    align-items: center; /* Sentrerer element horisontalt */
+    text-align: center; /* Sentrerer text i header */
 }
 
-.main {
-    grid-area: mymain;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-    display: block;
+/* Stil for hovedinnholdsseksjonen */
+.content {
+    margin-top: 10rem; /* Legger till øverste marginalen for avstand */
+    margin-bottom: 10rem; /* Legger till nedersta marginalen for avstand */
+    display: block; /* Viser innholdet som blokk (et under det andre) */
 }
 
-
+/* Stil for logotypen i header */
 .header-logo {
-    font-size: 24px;
-    margin: 0;
+    font-size: 24px; /* Setter tekststørrelsenen */
+    margin: 0; /* Tar bort standardmarginaler */
 }
 
+/* Stil for navigeringsseksjonen */
 .nav {
-    display: flex;
-    flex-direction: column;
-    grid-area: mynav;
+    display: flex; /* brukerer flex-layout for navigasjonen */
+    flex-direction: column; /* Stabler navigeringsobjekt vertikalt */
 }
 
+/* Stil for navigationsmeny */
 .nav-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style: none; /* Tar bort standard listepunkter */
+    padding: 0; /* Tar bort standard listemarginal */
+    margin: 0; /* Tar bort standard listemarginal */
+    text-decoration: none;
 }
 
-
-/* Mediaforespørsler for ulike skjermstørrelser */
-/* Mobil */
+/* Media Queries for responsiv design */
+/* Mobilstiler */
 @media (max-width: 600px) {
+    /* Stilar for små skjermer (maxbredde: 600px) */
     .nav-item {
-        margin-right: 10px;
-        font-size: 16px;
+        margin-right: 10px; /* Legger till marginal for navigeringsobjekt */
+        font-size: 16px; /* Setter tekststørrelsen for mindre skjermer */
     }
 
     .button-nav {
-        display: inline;
+        display: inline; /* Viser navigeringsknappen i rad */
     }
 }
 
-/* Tablet */
+/* Surfebrettstiler */
 @media (min-width: 601px) and (max-width: 1024px) {
+    /* Stiler for surfebrett (minimumsbredde: 601px och maxbredde: 1024px) */
     .header-logo {
-        font-size: 22px;
+        font-size: 22px; /* Justerer tekststørrelsen for surfebrett */
     }
 
     .nav-item {
-        font-size: 20px;
+        font-size: 20px; /* Justerer tekststørrelsen for surfebrett */
     }
 }
 
-/* Desktop */
+/* desktop */
 @media (min-width: 1025px) {
+    /* Stiler for større skjermer (minimumsbredde: 1025px) */
     .header {
-        flex-direction: row;
+        flex-direction: row; /* Viser header-objekt i en rad */
     }
 
     .header-logo {
-        font-size: 24px;
+        font-size: 24px; /* Tekststørrelse fpor større skjermer */
     }
 
     .nav {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: row; /* Viser navigeringsobjekt i en rad */
+        justify-content: space-between; /* Legger til mellomrom mellom navigeringsobjekt */
     }
 
     .nav-item {
-        font-size: 18px;
-        margin-right: 20px;
+        font-size: 18px; /* Tekststørrelse for større skjermer */
+        margin-right: 20px; /* Legger til marginal mellom navigeringsobjekt */
     }
 }
 
-.col-sm-12{
-    grid-column: auto / span 12;
+/* Ytterligere layoutstilar */
+.col-sm-12 {
+    grid-column: auto / span 12; /* Stil for en 12-kolonners layout */
 }
 
-@media(min-width >= 768px){
-    .col-md-6{
-        grid-column: auto / span 6;
+@media (min-width: 768px) {
+    .col-md-6 {
+        grid-column: auto / span 6; /* Stil for en 6-kolonners layout på større skjermer */
     }
 }
 
-/* parent to img-man and img-logo */
-.parent {
-    position: relative;
+/* Stiler for bilder og deres foreldreelement */
+.parent, .img-man, .img-logo {
+    position: relative; /* Setter relativ positionering for bilder och deres foreldreelement */
     top: 0;
     left: 0;
+    padding: 20px; /* Legger till marginaler rundt bilder */
 }
 
 .img-man {
-    position: relative;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    width: 100%;
-    max-width: 1000px;
-    height: auto;     
+    width: 100%; /* Setter bildebredden til 100% */
+    max-width: 1000px; /* Begrenser den maksimale bildebredden */
+    height: auto; /* Beholder bildets proporsjoner */
+    background-size: contain;
 }
 
 .img-logo {
-    position: relative;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    max-width: 400px;
-    height: auto;
+    max-width: 400px; /* Begrensar den maksimale bredden på logobilden */
+    height: auto; /* Beholder bildets proporsjoner */
+    background-size: cover;
 }
 
+/* Stiler for en navigasjonsmeny */
 .menu1 {
-    font-family: montserrat;
-    font-size: 16px;
+    font-family: montserrat; 
+    font-size: 16px; 
     color: #fff;
-    width: 429px;
-    margin: 0 auto;
-    height: 70px;
-    display: inline-flex;
-    justify-content: center;
-    list-style: none;
-    margin-top: 48px;
-    font-size: 16px;
-    font-weight: bold;
+    width: 429px; /* Sätter en fast bredde for menyen */
+    margin: 0 auto; /* Sentrerer menyen horisontalt */
+    height: 70px; /* Setter en fast høyde for menyen */
+    display: inline-flex; /* Viser menyobjektet i en rad */
+    justify-content: normal; /* Sentrerer menyobjektet horisontalt */
+    list-style: none; /* Tar bort standardlistepunkter */
+    margin-top: 48px; /* Legger till øverste marginalen for avstand */
+    font-weight: bold; /* Setter fet stil på teksten */
 }
 
-
-/* Har jeg bruk for disse? */
-a:link { text-decoration: none; }
-a:visited { text-decoration: none; }
-a:hover { text-decoration: none; }
-a:active { text-decoration: none; }
-
-
+/* Stiler for navigeringsknapper */
 .button-nav {
     background-color: #d99982;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 15px;
+    color: #fff; 
+    font-size: 16px; 
+    border-radius: 15px; /* Legger till avrundade hjørner på knappene */
 }
 
-body {
-    background-color: #d9d9d9;
-    margin: 0;
-    display: grid;
-    grid-template-areas: 
-        'myheader mynav'
-        'mynav mymain'
-        'mymain myfooter';
-}
-
+/* Stiler for rubrikker */
 h1 {
-    font-size: 32px;
-    font-family: montserrat;
-    color: #0b0c0d;
+    font-size: 32px; 
+    font-family: montserrat; 
+    color: #0b0c0d; 
 }
 
+/* Stiler for andre innholdselementer */
 .service-woman {
-    max-width: 400px;
-    float: left;
-    margin-left: 160px;
+    max-width: 400px; 
+    margin-left: 160px; 
 }
 
 .content-contact {
-    font-size: 16px;
-    font-family: "open sans";
+    font-size: 16px; 
+    font-family: "open sans"; 
     color: #0b0c0d;
-    float: right;
 }
 
-#container-grid {
-    position: relative;
-    min-height: 100vh
-}
-
-#content-wrap {
-    padding-bottom: 10rem;
-}
-
-#footer-pos{
-    background-color: #003b4a;
-    color: #fff;
-    width: 100%;
-    height: 10rem;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
+/* Stiler for footer */
+footer {
+    background-color: #003b4a; 
+    color: #fff; 
+    text-align: center; 
+    padding: 10px; /* Legger til marginal for avstand */
+    width: 100%; /* Gjør så footer dekker hele sidens bredde */
 }
 /* VALIDATE jigsaw.w3.org */

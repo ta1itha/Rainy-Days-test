@@ -1,43 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<script src="settings.json" defer></script>
     <head>
-        <link href="src\css\styles.css" rel="stylesheet"/>
-        <title>Rainy Days</title>
         <meta charset="utf-8"/>
         <meta name="description" content="We offer a wide range of styles, colors, and sizes, 
         so you can find the perfect jacket that suits your style and needs. Whether you are out on an adventure, 
         commuting to work, or simply want to be prepared for unexpected rain showers, we have the jacket for you. 
         We take pride in offering high-quality products and exceptional customer service.">
-        <meta name="wiewport" content="width=device-width, initial scale=1">
-        <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon-96x96.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,600i,900,900i" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&amp;subset=cyrillic-ext" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Rainy Days | Pushing the comfort zone - Home</title>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
     </head>
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                </ul>
-            </nav>
-            <img src="/img/Logo Rainy days.png" alt="RainyDays Logo"
-            height="219px" width="412px">
-            <img src="/img/philip-graves-7kyvHc3e-HA-unsplash.jpg" alt="Sporty man with caps"
-            height="800px" width="1000px">
-        </header>
-        <main>
-            <h1>My First Heading</h1>
-            <p>My first paragraph.</p>
-        </main>
-        <footer>
-            <p>Footer</p>
-            Copyright &copy; RainyDays 2023
-        </footer>
+        <div id="container-grid" class="col-sm-12 col-md-6 col-lg-4">
+            <div id="content-wrap">
+                <header class="header">
+                    <div class="parent">
+                        <img class="img-man" src="/img/philip-graves-7kyvHc3e-HA-unsplash.jpg" alt="Sporty man with caps" />
+                        <a href="index.html"><img src="/img/Logo-RD.png" alt="logo" class="img-logo"/></a>
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav-menu">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="collection.html">SHOP</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="contact-us.html">SUPPORT</a></li>
+                            <li><a href="login.html"><button class="button-nav">LOG IN</button></a></li>
+                        </ul>
+                    </nav>
+                <!--Hamburgermeny-->
+                </header>
+                <main>
+                    <section class="newarrivals">
+                        <img class="redraincoatman" src="/img/kal-visuals-cBZWCU2eA60-unsplash.jpg" alt="Man in red raincoat by the sea at sunset" height="auto" width="1120">
+                        <h1>NEW ARRIVALS</h1>
+                        <p>Shop now</p>
+                    </section>
+                    <section class="aboutus">
+                        <img class="greenraincoatwmn" src="/img/ivana-cajina-e6f8IaRQY7M-unsplash.jpg" alt="Woman i green raincoat photographing a pond" 
+                        height="auto" width="350px">
+                        <h2>Pushing the comfort zone</h2>
+                        <p>Our jackets is designed to keep you dry and comfortable whatever the weather. 
+                            With our high quality and durable materials, you can be sure that you are well protected against rain and wind.</p>
+                        <p>Our jackets are made with freedom of movement in mind, so you can enjoy your favorite activities without restrictions. 
+                            We offer a wide range of colors and styles, so you can find the rainwear that suits your personal style.</p>
+                        <button class="shop">SHOP</button>
+                    </section>
+                    <section class="bestsellers">
+                        <h3>Best sellers</h3>
+                        <p>Hurricane Hunter jacket</p>
+                        <p>£399</p>
+                        <button class="add-to-cart">Add to cart</button>
+                        <p>Teddy brushed fleece isolation jacket</p>
+                        <p>£59</p>
+                        <button class="add-to-cart">Add to cart</button>
+                        <p>Thunderstorm jacket</p>
+                        <p>£149</p>
+                        <button class="add-to-cart">Add to cart</button>
+                    </section>
+                    <button class="full-collection">See full collection</button>
+                    <section class="newsletter">
+                        <h3>Newsletter</h3>
+                        <p>Sign up to recieve Rainydays newsletter to recieve news, promo and fresh online content before everyone else.</p>
+                        <label for="email">Your email</label>
+                        <input type="email" id="email" name="email">
+                        <button class="signup">Sign up</button>
+                    </section>
+                </main>
+            </div>
+            <footer id="footer-pos">
+                <a href="index.html"><img src="/img/Logo-RD.png" alt="logo" class="img-logo"/></a>
+                <p>mail@rainydays.com</p>
+                Copyright &copy; RainyDays 2023
+                <p>Privacy policy</p>
+                <p>Terms and conditions</p>
+            </footer>
+        </div>
     </body>
-</html> 
+</html>
+
+<!--validator.w3.org valdidate by direct input.-->

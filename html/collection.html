@@ -1,37 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="src\css\styles.css"/>
-<script src="settings.json" defer></script>
     <head>
-      <title>Rainy Days</title>
         <meta charset="utf-8"/>
-        <met   a name="description" content="We offer a wide range of styles, colors, and sizes, 
+        <meta name="description" content="We offer a wide range of styles, colors, and sizes, 
         so you can find the perfect jacket that suits your style and needs. Whether you are out on an adventure, 
         commuting to work, or simply want to be prepared for unexpected rain showers, we have the jacket for you. 
         We take pride in offering high-quality products and exceptional customer service.">
-        <meta name="wiewport" content="width=device-width, initial scale=1">
-        <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon-96x96.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Rainy Days | Pushing the comfort zone - Support</title>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
     </head>
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                </ul>
-            </nav>
-            <img src="assets\philip-graves-7kyvHc3e-HA-unsplash.jpg"/>
-        </header>
-        <main>
-            <h1>My First Heading</h1>
-            <p>My first paragraph.</p>
-        </main>
-        <footer>
-            <p>Footer</p>
-            Copyright &copy; RainyDays 2023
-        </footer>
+        <div id="container-grid" class="col-sm-12 col-md-6 col-lg-4">
+            <div id="content-wrap">
+                <header class="header">
+                    <div class="parent">
+                        <img class="img-man" src="/img/philip-graves-7kyvHc3e-HA-unsplash.jpg" alt="Sporty man with caps" />
+                        <a href="index.html"><img src="/img/Logo-RD.png" alt="logo" class="img-logo"/></a>
+                        <nav class="nav">
+                            <ul class="nav-menu">
+                                <li><a href="index.html">HOME</a></li>
+                                <li><a href="collection.html">SHOP</a></li>
+                                <li><a href="about.html">ABOUT</a></li>
+                                <li><a href="contact-us.html">SUPPORT</a></li>
+                                <li><a href="login.html"><button class="button-nav">LOG IN</button></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                <!--Hamburgermeny-->
+                </header>
+                <main>
+                    <h1>Collection</h1>
+                    <section class="collection">
+                        <div>
+                            <img src="/img/RainyDays_Jacket1.jpg" alt="Hurricane hunter jacket">
+                            <p>Hurricane hunter jacket</p>
+                            <p>£399</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                        <div>
+                            <img src="/img/RainyDays_Jacket6.jpg" alt="Stormbreaker jacket">
+                            <p>Stormbreaker jacket</p>
+                            <p>£199</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                        <div>
+                            <img src="/img/RainyDays_Jacket5.jpg" alt="Cloud nine jacket">
+                            <p>Cloud nine jacket</p>
+                            <p>£49</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                        <div>
+                            <img src="/img/RainyDays_Jacket4.jpg" alt="Thunderstorm jacket">
+                            <p>Thunderstorm jacket</p>
+                            <p>£149</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                        <div>
+                            <img src="/img/RainyDays_Jacket7.jpg" alt="Teddy brushed fleece isolation jacket">
+                            <p>Teddy brushed fleece isolation jacket</p>
+                            <p>£59</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                        <div>
+                            <img src="/img/RainyDays_Jacket2.jpg" alt="Rainbow runner jacket">
+                            <p>Rainbow runner jacket</p>
+                            <p>£99</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                        <div>
+                            <img src="/img/RainyDays_Jacket3.jpg" alt="Full speed jacket">
+                            <p>Full speed jacket</p>
+                            <p>£109</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                    </section>
+                </main>
+            </div>
+            <footer id="footer-pos">
+                <a href="index.html"><img src="/img/Logo-RD.png" alt="logo" class="img-logo"/></a>
+                <p>mail@rainydays.com</p>
+                Copyright &copy; RainyDays 2023
+                <p>Privacy policy</p>
+                <p>Terms and conditions</p>
+            </footer>
+        </div>
     </body>
 </html> 

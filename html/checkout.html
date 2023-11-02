@@ -1,37 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="src\css\styles.css"/>
-<script src="settings.json" defer></script>
     <head>
-      <title>Rainy Days</title>
         <meta charset="utf-8"/>
-        <met   a name="description" content="We offer a wide range of styles, colors, and sizes, 
+        <meta name="description" content="We offer a wide range of styles, colors, and sizes, 
         so you can find the perfect jacket that suits your style and needs. Whether you are out on an adventure, 
         commuting to work, or simply want to be prepared for unexpected rain showers, we have the jacket for you. 
         We take pride in offering high-quality products and exceptional customer service.">
-        <meta name="wiewport" content="width=device-width, initial scale=1">
-        <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon-96x96.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Rainy Days | Pushing the comfort zone - Support</title>
+        <link rel="stylesheet" href="/css/checkout.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
     </head>
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                </ul>
-            </nav>
-            <img src="assets\philip-graves-7kyvHc3e-HA-unsplash.jpg"/>
-        </header>
-        <main>
-            <h1>My First Heading</h1>
-            <p>My first paragraph.</p>
-        </main>
-        <footer>
-            <p>Footer</p>
-            Copyright &copy; RainyDays 2023
-        </footer>
+        <div id="container-grid" class="col-sm-12 col-md-6 col-lg-4">
+            <div id="content-wrap">
+                <header class="header">
+                    <div class="parent">
+                        <img class="img-man" src="/img/philip-graves-7kyvHc3e-HA-unsplash.jpg" alt="Sporty man with caps" />
+                        <a href="index.html"><img src="/img/Logo-RD.png" alt="logo" class="img-logo"/></a>
+                        <nav class="nav">
+                            <ul class="nav-menu">
+                                <li><a href="index.html">HOME</a></li>
+                                <li><a href="collection.html">SHOP</a></li>
+                                <li><a href="about.html">ABOUT</a></li>
+                                <li><a href="contact-us.html">SUPPORT</a></li>
+                                <li><a href="login.html"><button class="button-nav">LOG IN</button></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                <!--Hamburgermeny-->
+                </header>
+                <main>
+                    <section class="Checkout-total">
+                        <h1>Checkout</h1>
+                        <div>
+                            <img src="/img/RainyDays_Jacket1.jpg" alt="Hurricane hunter jacket">
+                            <h2>Hurricane hunter jacket</h2>
+                            <p>£399</p>
+                            <p>Size medium</p>
+                            <P>Total £399</P>
+                            <p>All taxes included</p>
+                            <p>Shipping included</p>
+                        </div>                  
+                    </section>
+                    <p>Quick checkout</p>   
+                        <img src="/img/Paypal-Logo.jpg" alt="Paypal logo"> 
+                    <section>
+                        <h3>Contact information</h3>
+                        <form id="contact-form">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </form>
+                        <h3>Shipping address</h3>
+                        <form id="shipping-address">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" name="country" required>
+                            <label for="first-name">First name</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                            <label for="last-name">Last name</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" required>
+                            <label for="zip">Postal code</label>
+                            <input type="text" id="zip" name="zip" required>
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" required>
+                            <label for="telephone">Telephone (optional)</label>
+                            <input type="text" id="telephone" name="telephone" optional>
+                            <label for="save-info">Save my information to speed up checkout</label>
+                            <input type="checkbox" id="save-info" name="save-info">
+                        </form>
+                        <h3>Discount code</h3>
+                        <form>
+                            <label for="discout">Enter your discount code</label>
+                            <input type="text" id="discount" name="discount">
+                            <button id="apply-discount">Use</button>
+                        </form>
+                        <h3>Payment</h3>
+                        <form id="payment-form">
+                            <label for="credit-card">Credit card</label>
+                            <input type="checkbox" id="credit-card" name="credit-card">
+                            <label for="card-number">Card</label>
+                            <input type="text" id="card-number" name="card-number">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name">
+                            <label for="expiration">MM/YY</label>
+                            <input type="text" id="expiration" name="expiration">
+                            <label for="ccv">CCV</label>
+                            <input type="text" id="ccv" name="ccv">
+                            <label for="paypal">Paypal</label>
+                            <input type="checkbox" id="paypal" name="paypal">
+                        </form>
+                        <button id="paynow">PAY</button>
+                    </section>
+                </main>
+            </div>
+            <footer id="footer-pos">
+                <a href="index.html"><img src="/img/Logo-RD.png" alt="logo" class="img-logo"/></a>
+                <p>mail@rainydays.com</p>
+                Copyright &copy; RainyDays 2023
+                <p>Privacy policy</p>
+                <p>Terms and conditions</p>
+            </footer>
+        </div>
     </body>
 </html> 
+
+<!--validator.w3.org valdidate by direct input.-->
