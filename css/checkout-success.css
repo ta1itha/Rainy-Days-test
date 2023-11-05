@@ -1,0 +1,156 @@
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+body {
+    background-color: #d9d9d9;
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+        'header nav'
+        'nav content'
+        'content footer';
+    grid-template-rows: auto 1fr auto;
+}
+
+.header {
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(0,59,74,1));
+    background-blend-mode: multiply;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+/* Mediaforespørsler responsiv design */
+/* Mobil */
+@media (max-width: 600px) {
+    .nav-item {
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    .button-nav {
+        display: inline;
+    }
+}
+
+/* pad */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .header-logo {
+        font-size: 22px;
+    }
+
+    .nav-item {
+        font-size: 20px; 
+    }
+}
+
+/* desktop */
+@media (min-width: 1025px) {
+    
+    .header {
+        flex-direction: row;
+    }
+
+    .header-logo {
+        font-size: 24px; 
+    }
+
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-item {
+        font-size: 18px; 
+        margin-right: 20px; 
+    }
+}
+
+
+.col-sm-12 {
+    grid-column: auto / span 12; 
+}
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        grid-column: auto / span 6; 
+    }
+}
+
+
+.parent, .img-man, .img-logo {
+    position: relative; 
+    top: 0;
+    left: 0;
+    padding: 20px; 
+}
+
+.img-man {
+    width: 100%; 
+    max-width: 1000px; 
+    height: auto; 
+    background-size: contain;
+}
+
+.img-logo {
+    max-width: 400px; 
+    height: auto; 
+    background-size: cover;
+    mix-blend-mode: normal;
+}
+
+
+.menu1 {
+    font-family: 'Montserrat', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px; 
+    color: #fff;
+    width: 429px; 
+    margin: 0 auto; 
+    height: 70px; 
+    display: inline-flex; 
+    justify-content: normal; 
+    list-style: none; 
+    margin-top: 48px; 
+    font-weight: bold; 
+}
+
+
+.button-nav {
+    background-color: #d99982;
+    color: #fff; 
+    font-size: 16px; 
+    border-radius: 15px; 
+}
+
+
+h1 {
+    font-size: 32px; 
+    font-family: 'Montserrat'; 
+    color: #0b0c0d; 
+
+}
+
+
+footer {
+    background-color: #003b4a; 
+    color: #fff; 
+    text-align: center; 
+    padding: 0px; 
+    width: 100%;
+}
+/* VALIDATE jigsaw.w3.org */

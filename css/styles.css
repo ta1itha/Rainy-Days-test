@@ -34,12 +34,6 @@ body {
     display: block; /* Viser innholdet som blokk (et under det andre) */
 }
 
-/* Stil for logotypen i header */
-.header-logo {
-    font-size: 24px; /* Setter tekststørrelsenen */
-    margin: 0; /* Tar bort standardmarginaler */
-}
-
 /* Stil for navigeringsseksjonen */
 .nav {
     display: flex; /* brukerer flex-layout for navigasjonen */
@@ -181,7 +175,7 @@ footer {
     background-color: #003b4a; 
     color: #fff; 
     text-align: center; 
-    padding: 10px; /* Legger til marginal for avstand */
+    padding: 0;
     width: 100%; /* Gjør så footer dekker hele sidens bredde */
 }
 /* VALIDATE jigsaw.w3.org */
