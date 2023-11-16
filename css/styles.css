@@ -130,8 +130,8 @@ body {
 
 /* Stiler for en navigasjonsmeny */
 .menu1 {
-    font-family: montserrat; 
-    font-size: 16px; 
+    font-family: montserrat;
+    font-size: 16px;
     color: #fff;
     width: 429px; /* Sätter en fast bredde for menyen */
     margin: 0 auto; /* Sentrerer menyen horisontalt */
@@ -146,35 +146,35 @@ body {
 /* Stiler for navigeringsknapper */
 .button-nav {
     background-color: #d99982;
-    color: #fff; 
-    font-size: 16px; 
+    color: #fff;
+    font-size: 16px;
     border-radius: 15px; /* Legger till avrundade hjørner på knappene */
 }
 
 /* Stiler for rubrikker */
 h1 {
-    font-size: 32px; 
-    font-family: montserrat; 
-    color: #0b0c0d; 
+    font-size: 32px;
+    font-family: montserrat;
+    color: #0b0c0d;
 }
 
 /* Stiler for andre innholdselementer */
 .service-woman {
-    max-width: 400px; 
-    margin-left: 160px; 
+    max-width: 400px;
+    margin-left: 160px;
 }
 
 .content-contact {
-    font-size: 16px; 
-    font-family: "open sans"; 
+    font-size: 16px;
+    font-family: "open sans";
     color: #0b0c0d;
 }
 
 /* Stiler for footer */
 footer {
-    background-color: #003b4a; 
-    color: #fff; 
-    text-align: center; 
+    background-color: #003b4a;
+    color: #fff;
+    text-align: center;
     padding: 0;
     width: 100%; /* Gjør så footer dekker hele sidens bredde */
 }
